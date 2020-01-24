@@ -344,8 +344,8 @@ Intro
 
 #intro p {
 	width: 70%;
-	-webkit-animation-delay: 0.4s;
-	animation-delay: 0.4s;
+	-webkit-animation-delay: 30s;
+	animation-delay: 30s;
 	margin: 0 auto 30px auto;
 	color: #fff;
 }
@@ -371,7 +371,7 @@ Intro
 #intro .carousel-inner .next.left,
 #intro .carousel-inner .prev.right {
 	opacity: 1;
-	transition: 30s;
+	transition: 0.9s;
 }
 
 #intro .carousel-inner .next,

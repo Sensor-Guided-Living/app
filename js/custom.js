@@ -28,14 +28,14 @@
   //
 
   // Smooth scroll for the get started button
-  $('.btn-get-started').on('click', function(e) {
-      e.preventDefault();
-      var target = $(this.hash);
-      if (target.length) {
-        $('html, body').animate({
-          scrollTop: target.offset().top 
-        }, 700);
-      }
+  $('.btn-get-started').on('click', function (e) {
+    e.preventDefault();
+    var target = $(this.hash);
+    if (target.length) {
+      $('html, body').animate({
+        scrollTop: target.offset().top
+      }, 700);
+    }
   });
 
   // Fixed navbar
@@ -56,12 +56,12 @@
   // Intro carousel
   var introCarousel = $("#introCarousel");
   var introCarouselIndicators = $("#intro-carousel-indicators");
-  introCarousel.find(".carousel-inner").children(".item").each(function(index) {
+  introCarousel.find(".carousel-inner").children(".item").each(function (index) {
     (index === 0) ?
-    introCarouselIndicators.append("<li data-target='#introCarousel' data-slide-to='" + index + "' class='active'></li>") :
-    introCarouselIndicators.append("<li data-target='#introCarousel' data-slide-to='" + index + "'></li>");
+    introCarouselIndicators.append("<li data-target='#introCarousel' data-slide-to='" + index + "' class='active'></li>"):
+      introCarouselIndicators.append("<li data-target='#introCarousel' data-slide-to='" + index + "'></li>");
 
-    $(this).css("background-image", "url('" + $(this).children('.carousel-background').children('img').attr('src') +"')");
+    $(this).css("background-image", "url('" + $(this).children('.carousel-background').children('img').attr('src') + "')");
     $(this).children('.carousel-background').remove();
   });
 
