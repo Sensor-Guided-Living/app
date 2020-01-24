@@ -371,7 +371,7 @@ Intro
 #intro .carousel-inner .next.left,
 #intro .carousel-inner .prev.right {
 	opacity: 1;
-	transition: 0.9s;
+	transition: 30s;
 }
 
 #intro .carousel-inner .next,
