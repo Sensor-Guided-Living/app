@@ -1,3 +1,12 @@
+var d = 'typeof navigator : ' + typeof navigator; //object
+d += 'typeof navigator.mediaDevices : ' + typeof navigator.mediaDevices; // undefined
+// try alternates
+d += 'typeof navigator.getUserMedia  : ' + typeof navigator.getUserMedia; // undefined
+d += 'typeof navigator.webkitGetUserMedia  : ' + typeof navigator.webkitGetUserMedia; // undefined
+status1.innerHTML = d;
+
+
+
 const URL = "https://teachablemachine.withgoogle.com/models/9PSd-i9l/";
 let model, webcam, ctx, labelContainer, maxPredictions;
 
