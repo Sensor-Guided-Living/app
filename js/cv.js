@@ -76,11 +76,11 @@ async function predict() {
     //console.log(prediction[0].className);
   }
   /* extraer valores de variables */
-  cuenta = prediction[0].className + prediction[0].probability; //uno significa el segundo valor del
-  console.log(cuenta);
+  cuenta = prediction[1].className + prediction[1].probability; //uno significa el segundo valor del
+  //console.log(cuenta);
 
   var rutina = 0;
-  var cond = "Gesto PESAS1";
+  var cond = "gestos1";
   var contadore = 0;
 
   if (cuenta == cond) {
@@ -89,7 +89,6 @@ async function predict() {
 
     function incrementar() {
       contadore++;
-
       console.log("El contador ahora vale :" + contadore);
       document.getElementById("demo").innerHTML = cuenta;
     }
