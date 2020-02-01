@@ -390,6 +390,15 @@ Intro
 	top: calc(50% - 15px);
 }
 
+button {
+	background-color: blue;
+	color: chartreuse;
+}
+
+div {
+	color: chartreuse;
+}
+
 #intro .carousel-control-prev {
 	left: 20px;
 }

@@ -4,9 +4,9 @@
 <head>
   <title>SGL</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
-  
-    
-    
+
+
+
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- css -->
@@ -20,11 +20,8 @@
 </head>
 
 <body>
-  <script
-  type="module"
-  src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwainstall"
-></script>
-<pwa-install></pwa-install>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwainstall"></script>
+  <pwa-install></pwa-install>
   <!-- Navigation -->
   <nav class="navbar navbar-default" role="navigation">
     <div class="container">
@@ -68,12 +65,15 @@
                 <h2 class="animated fadeInDown">Sensor Guided Living</h2>
                 <p>We want to offer a free trial, where you will be trained by our
                   application</p>
-                <p>Sensor Guided Living, press the button Start</p>
-                <p>For Now ANDROID, WINDOWS, HONGMENG , LINUX</p>
-                <p>[iOS building....]</p>
-                <button  type="button"  class="btn-get-started animated fadeInUp" onclick="init()" >Start</button>
-                <input type="file" accept="video/*;capture=camcorder" onclick="init()">
-                <input type="file" accept="image/*">
+                <br>Sensor Guided Living, press the button Start<br />
+                <br>For Now ANDROID, WINDOWS, HONGMENG , LINUX</br>
+                <br>[iOS building....]</br>
+                <button type="button" onclick="init()">Start</button>
+
+                <p id="demo">cantidad de repeticiones.</p>
+
+                <!--  <input type="file" accept="video/*;capture=camcorder" onclick="init()">
+                <input type="file" accept="image/*">-->
                 <div><canvas id="canvas"></canvas></div>
                 <div id="label-container"></div>
                 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
