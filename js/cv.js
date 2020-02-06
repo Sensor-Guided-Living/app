@@ -2,6 +2,9 @@ const URL = "https://teachablemachine.withgoogle.com/models/9PSd-i9l/";
 let model, webcam, ctx, labelContainer, maxPredictions;
 
 async function init() {
+  alert(
+    "hello, our platform works on the following OS, [Android, Windows, Linux]"
+  );
   const modelURL = URL + "model.json";
   const metadataURL = URL + "metadata.json";
 
@@ -46,7 +49,10 @@ async function loop(timestamp) {
 async function predict() {
   // Prediction #1: run input through posenet
   // estimatePose can take in an image, video or canvas html element
-  const { pose, posenetOutput } = await model.estimatePose(webcam.canvas);
+  const {
+    pose,
+    posenetOutput
+  } = await model.estimatePose(webcam.canvas);
   // Prediction 2: run input through teachable machine classification model
   const prediction = await model.predict(posenetOutput);
 
