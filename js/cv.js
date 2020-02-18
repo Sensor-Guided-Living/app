@@ -8,16 +8,14 @@ async function init() {
   const modelURL = URL + "model.json";
   const metadataURL = URL + "metadata.json";
 
-  // load the model and metadata
-  // Refer to tmImage.loadFromFiles() in the API to support files from a file picker
-  // Note: the pose library adds a tmPose object to your window (window.tmPose)
+  /*  */
   model = await tmPose.load(modelURL, metadataURL);
   maxPredictions = model.getTotalClasses();
   const uploadModel = document.getElementById("upload-model");
   const uploadWeights = document.getElementById("upload-weights");
   const uploadMetadata = document.getElementById("upload-metadata");
+  /* web cam */
 
-  // Convenience function to setup a webcam
   const size = 250;
   const flip = true; // whether to flip the webcam
   webcam = new tmPose.Webcam(size, size, flip); // width, height, flip
@@ -30,6 +28,7 @@ async function init() {
   canvas.width = size;
   canvas.height = size;
   ctx = canvas.getContext("2d");
+
   labelContainer = document.getElementById("label-container");
   for (let i = 0; i < maxPredictions; i++) {
     // and class labels
@@ -49,10 +48,7 @@ async function loop(timestamp) {
 async function predict() {
   // Prediction #1: run input through posenet
   // estimatePose can take in an image, video or canvas html element
-  const {
-    pose,
-    posenetOutput
-  } = await model.estimatePose(webcam.canvas);
+  const { pose, posenetOutput } = await model.estimatePose(webcam.canvas);
   // Prediction 2: run input through teachable machine classification model
   const prediction = await model.predict(posenetOutput);
 
@@ -91,12 +87,12 @@ async function predict() {
 
   if (cuenta == cond) {
     rutina++;
-    setTimeout(console.log(rutina), 100);
+    //setTimeout(console.log(rutina), 100);
 
     function incrementar() {
       contadore++;
-      console.log("El contador ahora vale :" + contadore);
-      document.getElementById("demo").innerHTML = cuenta;
+
+      document.getElementById("tuti").innerHTML = contadore;
     }
     incrementar();
   }
