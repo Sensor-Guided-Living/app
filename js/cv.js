@@ -48,7 +48,10 @@ async function loop(timestamp) {
 async function predict() {
   // Prediction #1: run input through posenet
   // estimatePose can take in an image, video or canvas html element
-  const { pose, posenetOutput } = await model.estimatePose(webcam.canvas);
+  const {
+    pose,
+    posenetOutput
+  } = await model.estimatePose(webcam.canvas);
   // Prediction 2: run input through teachable machine classification model
   const prediction = await model.predict(posenetOutput);
 
@@ -80,25 +83,31 @@ async function predict() {
   /* extraer valores de variables */
   cuenta = prediction[1].className + prediction[1].probability; //uno significa el segundo valor del
   //console.log(cuenta);
-
-  var rutina = 0;
   var cond = "gestos1";
 
-  var sum = 1;
+
   var lac = "repeticiones es:";
   var contadore = 1;
-
-  if (cond == cuenta) {
-    add();
+  var i = 0;
+  /*   while (i < 850) {
+     console.log("Hola mundo");
+     i = i + 1;
+   }*/
+  function m() {
+    console.log(cuenta);
   }
 
-  function add() {
-    contadore++;
-    console.log(contadore);
 
-    foo = document.getElementById("contador").innerHTML;
-    foo++;
-    document.getElementById("contador").innerHTML = foo;
+  if (cuenta == cond) {
+    var n = 0;
+    var l = document.getElementById("number");
+    window.setInterval(function () {
+      l.innerHTML = n;
+      n++;
+    }, 4000);
+    m();
+
+
   }
   //if (cuenta == cond) {
   //function contador() {
@@ -116,11 +125,10 @@ async function predict() {
   //
 
   //while (cuenta == cond) {
-  //document.getElementById("tuti").innerHTML = contadore;
+  //document.getElementById("tuti").innerHTML = contadore;*
   //setInterval(contadore++, 3000);
 
-  //contadore++;
-  //console.log(contadore);
+  //console.log(contadore);-ppppppppppppppppppppppppppppppppppp`
 
   /* if (cuenta == cond) {
     var numberSelected = 0;
