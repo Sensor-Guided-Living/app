@@ -104,7 +104,7 @@ async function predict() {
     window.setInterval(function () {
       l.innerHTML = n;
       n++;
-    }, 4000);
+    }, 2000);
     m();
 
 
