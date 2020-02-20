@@ -83,19 +83,71 @@ async function predict() {
 
   var rutina = 0;
   var cond = "gestos1";
-  var contadore = 0;
 
-  if (cuenta == cond) {
-    rutina++;
-    //setTimeout(console.log(rutina), 100);
+  var sum = 1;
+  var lac = "repeticiones es:";
+  var contadore = 1;
 
-    function incrementar() {
-      contadore++;
-
-      document.getElementById("tuti").innerHTML = contadore;
-    }
-    incrementar();
+  if (cond == cuenta) {
+    add();
   }
+
+  function add() {
+    contadore++;
+    console.log(contadore);
+
+    foo = document.getElementById("contador").innerHTML;
+    foo++;
+    document.getElementById("contador").innerHTML = foo;
+  }
+  //if (cuenta == cond) {
+  //function contador() {
+  //var contador = document.getElementById("contador");
+  //contador.innerHTML = cont;
+  //cont++;
+  //}
+  //setInterval("contador()", 1000);
+  //document.getElementById("contador").innerHTML = cont;
+
+  //for (cuenta == cond; contadore < 100; contadore++) {
+  // console.log(contadore);
+  //document.getElementById("tuti").innerHTML = contadore;
+
+  //
+
+  //while (cuenta == cond) {
+  //document.getElementById("tuti").innerHTML = contadore;
+  //setInterval(contadore++, 3000);
+
+  //contadore++;
+  //console.log(contadore);
+
+  /* if (cuenta == cond) {
+    var numberSelected = 0;
+  for (var i = 0; i < selectObject.options.length; i++) {
+    if (selectObject.options[i].selected) {
+      numberSelected++;
+      document.getElementById("tuti").innerHTML;
+    }
+  }
+  return numberSelected;
+} */
+
+  //setTimeout(console.log(rutina), 100);
+
+  //function incrementar() {
+  // var c = document.getElementById("div").childElementCount;
+  // document.getElementById("tuti").innerHTML = c;
+  //contadore + sum;
+
+  //++;
+  // document.getElementById("tuti").innerText = contadore;
+
+  //document.getElementById("tuti").innerHTML = contadore;
+  // }
+  //incrementar();
+  //console.log(contadore);
+  // }
 
   // finally draw the poses
   drawPose(pose);
